@@ -1,11 +1,15 @@
 # Pytorch-for-Kepler
 Pytorch wheel package built for Nvidia Kepler GPUs. Currently supports newer Kepler GPUs (cuda compute capability 3.5 and 3.7) on Linux. 
 
+## Update on 2025.4.2
+Since the Maxwell architecture was also deprecated by the official builds, this unofficial builds starting with version 2.5 added cuda compute capability `5.0` to the support as well.
+
 # How to use
 to use this pre-build package, simply download whl file from the release, and install it using pip:
 ```python
-python -m pip install ./torch-2.1.0a0+git7bcf7da-cp39-cp39-linux_x86_64.whl # change whl package name to real file name.
+python -m pip install torch-2.1.0a0+git7bcf7da-cp39-cp39-linux_x86_64.whl # change whl package name to real file name.
 ```
+You may also need to install the `cuda` and `cudnn` runtime packages via `pip` or `conda`.
 
 # OS Support
 This pre-build package only supports Linux (only tested on Ubuntu). The supported architecture is amd64. If you want to use Kepler GPU on arm64 or other architecture, please follow this [guide](https://github.com/xiaoran007/Old-GPUs-DL) to build pytorch from source.
